@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="./static/image/favicon.ico" rel="icon">
+    <title>Storage Service</title>
+</head>
+<body>
+    <div class="container ">
+        <nav class="border navbar navbar-dark bg-dark navbar-expand-lg navbar-dark "">
+            <a class="navbar-brand" href="index.html">Storage Service</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="signUp.html">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="adminSignIn.html">Admin Sign In</a>
+                    </li>
+                </ul>              
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <br>
+        <h2>Contents</h2><br>
+        <h3 style="color: green;">USER :  {{data.id}}</h2>
+        <h3 style="color: green">{{data.msg}}</h3><br>
+        <div class="container">
+            <h3 style="color: blue;">Your Contents are : </h3>
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col">Text</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for t in data.titles %}
+                    <tr>
+                        <th scope="row">{{t.title}}</th>
+                        <th>{{t.text}}</th>
+                    </tr>
+                {%endfor%}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="container">
+        <div class="form-group">
+            <a class="btn btn-primary" href="deleteContent.html" role="button">Delete Content</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="btn btn-primary" href="updateContent.html" role="button">Update Content</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="btn btn-primary" href="/balance" role="button">Check Balance</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="btn btn-primary" href="afterLogIn.html" role="button">Upload Contents</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="btn btn-primary" href="index.html" role="button">Log Out</a>
+        </div>
+    </div>
+</body>
+</html>

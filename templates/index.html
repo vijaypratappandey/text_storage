@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="./static/image/favicon.ico" rel="icon">
+    <title>Storage Service</title>
+</head>
+<body>
+    <div class="container ">
+        <nav class="border navbar navbar-dark bg-dark navbar-expand-lg navbar-dark "">
+            <a class="navbar-brand" href="index.html">Storage Service</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="signUp.html">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="adminSignIn.html">Admin Sign In</a>
+                    </li>
+                </ul>              
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <br>
+            <h2>Log In</h2>
+            <h3 style="color: red;">{{msg}}</h3>
+            <form class="px-2 py-5" method="post" action="/submit_signin_form">
+              <div class="form-group">
+                <label for="exampleDropdownFormEmail1">Email address</label>
+                <input type="email" name="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+              </div>
+              <div class="form-group">
+                <label for="exampleDropdownFormPassword1">Password</label>
+                <input type="password" name="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+              </div>
+              <button type="submit" class="btn btn-primary">Sign In</button>
+            </form>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="signUp.html">New around here? Sign Up</a>
+    </div>
+</body>
+</html>
