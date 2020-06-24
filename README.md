@@ -1,5 +1,5 @@
 # contents_storage
-A flask baseed website which store the contents for individual users in MongoDB database
+A flask based website which store the contents for individual users in MongoDB database
 
 ## Tools
 * Flask Framework
